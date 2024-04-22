@@ -154,14 +154,15 @@
                 document.getElementById("mobileno").innerHTML = "**this field should only consist of digits";
                 return false; 
             }
-            if (mobileNumber.substring(0,2) != '09') {
+            if (mobileNumber.length < 11) {
                 document.getElementById("mobileno").innerHTML = "**Please enter a valid number";
                 return false;
             }
-
+            if (mobileNumber.substring(0,2) != '09') {
+                document.getElementById("mobileno").innerHTML = "**Please enter a valid number like 09123456789";
+                return false;
+            }
         }
-
-        
     </script>
 
 </body>
